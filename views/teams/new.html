@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Team</title>
+</head>
+
+<body>
+    <h1>Enter a New Team</h1>
+    <form action="/teams" method="post">
+        <label for="name">
+            name: <input type="text" name="name" id="name">
+        </label>
+        <label for="country">
+            country: <input type="text" name="country" id="country">
+        </label>
+        <label for="established">
+            established: <input type="text" name="established" id="established">
+        </label>
+        <label for="stadium">
+            stadium: <input type="text" name="stadium" id="stadium">
+        </label>
+        <label for="image">
+            image: <input type="text" name="image" id="image">
+        </label>
+        <button type="submit">Submit New Team</button>
+    </form>
+    <form action="/teams">
+        <button>Back</button>
+     </form>
+     <form action="/">
+        <button>Home</button>
+     </form>
+</body>
+
+</html>

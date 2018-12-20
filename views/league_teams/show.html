@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>{{teams.name}}</title>
+</head>
+<style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+    }
+    nav{
+      background-color: teal;
+    }
+    </style>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo center">Home</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                  <li><a href="/leagues/{{league.id}}">see The {{league.name}}</a></li>
+              </ul>
+            </div>
+          </nav>
+      
+      <br>
+       
+     
+        <img  src="{{teams.image}}" alt="" class="center">
+       
+      
+      <div class="container">
+        <table class="highlight">
+          <tr>
+            <td>Name:</td>
+            <td>{{teams.name}}</td>
+          </tr>
+          <tr>           
+            <td>Matches Played:</td>
+            <td>{{teams.matches_played}}</td>
+          </tr>
+          <tr>
+            <td>Win</td>
+            <td>{{teams.win}}</td>
+          </tr>
+          <tr>
+            <td>Draw</td>
+            <td>{{teams.draw}}</td>
+          </tr>
+          <tr>
+            <td>Lose:</td>
+            <td>{{teams.lose}}</td>
+          </tr>
+          <tr>
+            <td>Goals For:</td>
+            <td>{{teams.goals_for}}</td>
+          </tr>
+          <tr>
+              <td>Goals Against:</td>
+              <td>{{teams.goals_against}}</td>
+            </tr>
+            <tr>
+                <td>Goals Difference:</td>
+                <td>{{teams.goals_difference}}</td>
+              </tr>
+              <tr>
+                  <td>Points:</td>
+                  <td>{{teams.points}}</td>
+                </tr>
+        </table>
+        <br>
+        <a class="waves-effect waves-light btn" href="/leagues/{{league.id}}/team/{{teams.teams_id}}/edit">Edit</a>
+        <a class="waves-effect waves-light btn" href="/leagues/{{league.id}}/teams">Back</a>
+       <br>
+       <br>
+        <form action="/leagues/{{league.id}}/team/{{teams.teams_id}}?_method=DELETE" method="post">
+          <button class="btn waves-effect waves-light" type="submit">Delete
+            <i class="material-icons right">delete</i>
+          </button>
+        </form>
+      </div>
+
+
+      <form action="/leagues/{{id}}?_method=DELETE" method="post">
+        <button type="submit">Delete league</button>
+      </form>
+
+
+     
+      
+   
+   
+    
+</body>
+</html>

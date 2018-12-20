@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+ 
+    <a href="/">Home</a>
+    <a href="/leagues/{{league_id}}/teams">see The {{league[1].league_name}} </a>
+    <br>
+    <h1>Edit {{name}}</h1>
+    <form action="/leagues/{{id}}/team/{{teams_id}}?_method=PUT" method="post">
+        <label for="matches_played">
+            matches_played: <input type="number" name="matches_played" id="matches_played" value="{{matches_played}}">
+        </label>
+        <label for="win">
+            win: <input type="number" name="win" id="win" value="{{win}}">
+        </label>
+        <label for="draw">
+            draw: <input type="number" name="draw" id="draw" value="{{draw}}">
+        </label>
+        <label for="lose">
+            lose: <input type="number" name="lose" id="lose" value="{{lose}}">
+        </label>
+        <label for="goals_for">
+            goals_for: <input type="number" name="goals_for" id="goals_for" value="{{goals_for}}">
+        </label>
+        <label for="goals_against">
+            goals_against: <input type="number" name="goals_against" id="goals_against" value="{{goals_against}}">
+        </label>
+        <label for="goals_difference">
+            goals_difference: <input type="number" name="goals_difference" id="goals_difference" value="{{goals_difference}}">
+        </label>
+        <label for="points">
+            points: <input type="number" name="points" id="points" value="{{points}}">
+        </label>
+        <label for="teams_id">
+            teams_id: <input type="number" name="teams_id" id="teams_id" value="{{teams_id}}">
+        </label>
+        <label for="league_id">
+            league_id: <input type="number" name="league_id" id="league_id" value="{{league_id}}">
+        </label>
+        <button type="submit">Submit New Changes</button>
+    </form>
+    <form action="/leagues/{{league_id}}/team/{{teams_id}}">
+        <button>Back</button>
+    </form>
+    <form action="/">
+        <button>Home</button>
+    </form>
+</body>
+
+</html>

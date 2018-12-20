@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit {{name}}'s Details</title>
+</head>
+<body>
+  <h1>Edit {{name}}</h1>
+  <form action="/teams/{{id}}?_method=PUT" method="post">
+    <label for="name">
+            name: <input type="text" name="name" id="name" value="{{name}}">
+        </label>
+        <label for="country">
+            country: <input type="text" name="country" id="country" value="{{country}}">
+        </label>
+        <label for="established">
+            established: <input type="text" name="established" id="established" value="{{established}}">
+        </label>
+        <label for="stadium">
+            stadium: <input type="text" name="stadium" id="stadium" value="{{stadium}}">
+        </label>
+        <label for="image">
+            image: <input type="text" name="image" id="image" value="{{image}}">
+        </label>
+    <button type="submit">submit changes</button>
+  </form>
+  <form action="/teams">
+    <button>Back</button>
+ </form>
+ <form action="/">
+    <button>Home</button>
+ </form>
+</body>
+</html>

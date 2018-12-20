@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+        nav{
+          background-color: teal;
+        }
+        </style>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">Home</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/leagues">see all Leagues</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+
+
+    <img src="{{image}}" alt="" class="center">
+
+
+    <div class="container">
+        <table class="highlight">
+            <tr>
+                <thead>
+                    <td>Team Name</td>
+                    <td>Matches Played</td>
+                    <td>Win</td>
+                    <td>Draw</td>
+                    <td>Lose</td>
+                    <td>GF</td>
+                    <td>GA</td>
+                    <td>GD</td>
+                    <td>points</td>
+                </thead>
+            </tr>
+          {{#teams}}
+        
+          <tr>
+             <td><a href="/leagues/{{league.id}}/team/{{teams_id}}">{{team_name}}</a></td>
+              <td>{{matches_played}}</td>
+              <td>{{win}}</td>
+              <td>{{draw}}</td>
+              <td>{{lose}}</td>
+              <td>{{goals_for}}</td>
+              <td>{{goals_against}}</td>
+              <td>{{goals_difference}}</td>
+              <td>{{points}}</td>
+          </tr>
+          {{/teams}}
+        </table>
+        <br>
+        <a class="waves-effect waves-light btn" href="/leagues/{{league.id}}">Back</a>
+        <a class="waves-effect waves-light btn" href="/leagues/{{league.id}}/teams/new">New</a>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</body>
+
+</html>

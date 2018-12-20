@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New {{name}}</title>
+</head>
+
+<body>    
+    <h1>Edit {{name}}</h1>
+    <form action="/leagues/{{id}}?_method=PUT" method="post">
+        <label for="matches_played">
+            matches_played: <input type="text" name="name" id="name" value="{{name}}">
+        </label>
+        <label for="founded">
+            founded: <input type="text" name="founded" id="founded" value="{{founded}}">
+        </label>
+        <label for="number_of_teams">
+            number_of_teams: <input type="text" name="number_of_teams" id="number_of_teams" value="{{number_of_teams}}">
+        </label>
+        <label for="champion">
+            champion: <input type="text" name="champion" id="champion" value="{{champion}}">
+        </label>
+        <label for="region">
+            region: <input type="text" name="region" id="region" value="{{region}}">
+        </label>
+        <label for="country">
+            country: <input type="text" name="country" id="country" value="{{country}}">
+        </label>
+        <label for="image">
+            image: <input type="text" name="image" id="image" value="{{image}}">
+        </label>
+        <button type="submit">Submit New Changes</button>
+    </form>
+    <form action="/leagues/{{id}}">
+        <button>Back</button>
+     </form>
+     <form action="/">
+        <button>Home</button>
+     </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "the-sultan-scores",
+  "version": "1.0.0",
+  "description": "This is for project 2 for Misk foundation and General Assembely for the wdi course ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SultanBS/TheSultanScores.git"
+  },
+  "author": "Sultan Alsubaie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SultanBS/TheSultanScores/issues"
+  },
+  "homepage": "https://github.com/SultanBS/TheSultanScores#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "football-cli": "^0.1.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "mustache-express": "^1.2.8",
+    "nodemon": "^1.18.9",
+    "pg-promise": "^8.5.4"
+  }
+}
