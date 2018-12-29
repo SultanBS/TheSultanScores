@@ -39,9 +39,9 @@ express, mustach, body-parser, pg-promise, and method-override morgan, and maybe
 - Create tables for the members.
 
 **Link to the repo:** 
-https://github.com/SultanBS/TheSultanScores.git
+- https://github.com/SultanBS/TheSultanScores.git
 
 
 **Link to the project:**
-https://the-sultan-scores.herokuapp.com/
+- https://the-sultan-scores.herokuapp.com/
 
